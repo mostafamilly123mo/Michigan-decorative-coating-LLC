@@ -30,6 +30,7 @@
     "portfinder-sync": "0.0.2",
     "raw-loader": "^4.0.2",
     "three": "^0.128.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",

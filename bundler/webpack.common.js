@@ -56,20 +56,11 @@ module.exports = {
             // Images
             {
                 test: /\.(jpg|png|gif|svg)$/,
-                use:
-                [
-                    {
-                        loader: 'file-loader',
-                        options:
-                        {
-                            outputPath: 'assets/images/'
-                        },
-                    
-                          
-                
-                    }
-                ]
-            },
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[hash][ext][query]'
+                  }
+              },
             //sounds
             {
                 test: /\.(mp3|wav)$/,
