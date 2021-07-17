@@ -1,11 +1,9 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/orbitcontrols'
-import './config/bootstrapConfig'
 import './style.css'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import loadEpoxyOneTexutes from './config/epoxy1Textures';
 import loadPConcreteTexutes from './config/polishedConcrete';
-
 
 /*
     Vairables
@@ -48,14 +46,12 @@ epoxyFloorButton.addEventListener('click' ,() => {
 floor.material.map = epoxy1Textures.epoxyColorTexture
 floor.material.roughnessMap = epoxy1Textures.epoxyRoughnessTexture
 floor.material.normalMap = epoxy1Textures.epoxyNormalTexture
-floor.material.displacementMap = epoxy1Textures.epoxyHeightTexture
 })
 const concreteFloorButton = document.querySelector('.concreteFloorButton')
 concreteFloorButton.addEventListener('click' ,() => {
 floor.material.map = polishedConcreteTextures.pConcreteColorTexture
 floor.material.roughnessMap = polishedConcreteTextures.pConcreteRoughnessTexture
 floor.material.normalMap = polishedConcreteTextures.pConcreteNormalTexture
-floor.material.displacementMap = polishedConcreteTextures.pConcreteRoughnessTexture
 })
 
 /*
@@ -85,7 +81,6 @@ const floor = new THREE.Mesh(
     new THREE.PlaneBufferGeometry(115.3, 169.7, 32),
     new THREE.MeshStandardMaterial({
         map : epoxy1Textures.epoxyColorTexture ,
-        displacementMap : epoxy1Textures.epoxyHeightTexture,
         roughnessMap :epoxy1Textures.epoxyRoughnessTexture,
         normalMap : epoxy1Textures.epoxyNormalTexture
     }))

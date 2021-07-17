@@ -129,8 +129,8 @@ html {
         }
 }
 .redButton {
-    background-color: #fc3c3c;
-    color: wheat;
+    background-color: #fc3c3c !important;
+    color: wheat !important;
 }
 
 .galleryDiv div {
