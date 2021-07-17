@@ -1,32 +1,325 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michigan decorative coating LLC</title>
 </head>
+
 <body>
-    <nav class="navbar nav navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="assets/images/images.png">
+  <nav class="navbar navbar-expand-md navbar-dark bg-black">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="navbar-brand d-none d-md-block">
+        <img src="assets/images/logo.svg" class="logoImage">
+      </a>
+      <a href="#" class="navbar-brand d-md-none d-block mx-auto">
+        <img src="assets/images/logo2.svg" class="logoImageMob">
+      </a>
+      <div class="collapse navbar-collapse mb-2 mb-md-0" id="navbarMenu">
+        <ul class="navbar-nav me-auto ms-md-3 mt-3 mt-md-0 mb-2 mb-md-0 gap-3 text-center">
+          <li class="nav-item ">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
-            aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        Home
-                    </li>
-                    <li class="nav-item">
-                        Home
-                    </li>
-                </ul>
-            </div>
+            <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Epoxy flooring</a></li>
+              <li><a class="dropdown-item" href="#">Concrete</a></li>
+              <li><a class="dropdown-item" href="#">Dry wall</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+        </ul>
+        <div class="d-flex d-md-block d-none me-2">
+          <button class="btn btn-outline-warning  " onclick="location.href='#contact'">
+            Contact
+          </button>
         </div>
-    </nav>
-    <canvas class="webgl"></canvas>
+        <div class="d-grid d-md-none d-block me-2">
+          <button class="btn btn-outline-warning ">
+            Contact
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="jumbotron bg-black text-white text-center">
+    <div class="headerText">
+      <h2 class="display-6 mt-2 mb-2">Michigan Decorative Coating LLC</h2>
+      <p class="lead mt-4 mb-4">
+        Lorem ipsum dolor sit amet, mazim nonumy explicari ea vis. Ne ceteros blandit expetendis nec,
+      </p>
+      <div class="container mt-2 mb-1">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <button class="btn btn-outline-warning serviceBtn">
+              Epoxy Flooring
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-outline-warning serviceBtn">
+              Clear Epoxy
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-outline-warning serviceBtn">
+              Color Flex
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-outline-warning serviceBtn">
+              Decorative Concrete
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-outline-warning serviceBtn">
+              Stamped Concrete
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+  <div class="webGlContatiner">
+    <canvas class="webgl" height="150"></canvas>
+    <div class="imageButtonContainers">
+      <button class="imageButton epoxyFloorButton" data-bs-toggle="tooltip" data-bs-placement="left"
+        title="Epoxy floor">
+        <img class="img-thumbnail floorImages" src="assets/images/epoxyColor.png" height="64" width="64">
+      </button>
+      <button class="imageButton concreteFloorButton">
+        <img class="img-thumbnail floorImages" src="assets/images/concreteImage.png" height="64" width="64"
+          data-bs-toggle="tooltip" data-bs-placement="left" title="Concrete floor">
+      </button>
+    </div>
+  </div>
+
+  <div class="container-fluid p-3">
+    <div class="row row-content text-center align-items-center">
+      <div class="col-12 mb-4">
+        <h2 class="display-4">
+          Services
+        </h2>
+        <hr style="width: 130px; margin: 0 auto; height: 3px; color: red;" class="mb-4">
+      </div>
+      <div class="col-12 col-md-5 offset-md-1 mb-4">
+        <h3 class="mb-4">
+          Epoxy Flooring
+        </h3>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, mazim nonumy explicari ea vis. Ne ceteros blandit expetendis nec,
+          vocent iracundia ad usu. His solum mucius iudicabit ne, at mel singulis partiendo. Eu epicurei.
+        </p>
+        <button class="btn redButton">
+          More Information
+        </button>
+      </div>
+      <div class="col-12 col-md-6" style="position: relative;">
+        <img class="img-fluid" style="width: 400px;" src="assets/images/epoxy/photo_2021-07-09_17-09-53.jpg">
+        <img class="img-thumbnail secondImage" width="200" height="200" src="assets/images/epoxy/bluefloor.jpg">
+      </div>
+    </div>
+
+    <div class="row row-content text-center align-items-center">
+      <div class="col-12 col-md-6 order-md-first order-2" style="position: relative;">
+        <img class="img-fluid" style="width: 400px;" src="assets/images/concrete/photo_2021-07-17_02-44-07.jpg">
+        <img class="img-thumbnail secondImage2" width="200" height="200"
+          src="assets/images/concrete/photo_2021-07-09_17-09-57 (2).jpg">
+      </div>
+      <div class="col-12 mt-2 col-md-5 mb-4 order-md-last order-1">
+        <h3 class="mb-4 ">
+          Concrete
+        </h3>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, mazim nonumy explicari ea vis. Ne ceteros blandit expetendis nec,
+          vocent iracundia ad usu. His solum mucius iudicabit ne, at mel singulis partiendo. Eu epicurei.
+        </p>
+        <button class="btn redButton">
+          More Information
+        </button>
+      </div>
+
+    </div>
+
+    <div class="row row-content text-center align-items-center">
+      <div class="col-12 col-md-5 offset-md-1 mb-4">
+        <h3 class="mb-4">
+          Dry wall
+        </h3>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, mazim nonumy explicari ea vis. Ne ceteros blandit expetendis nec,
+          vocent iracundia ad usu. His solum mucius iudicabit ne, at mel singulis partiendo. Eu epicurei.
+        </p>
+        <button class="btn redButton">
+          More Information
+        </button>
+      </div>
+      <div class="col-12 col-md-6" style="position: relative;">
+        <img class="img-fluid" style="width: 400px;" src="assets/images/drywall/photo_2021-07-17_02-42-50.jpg">
+        <img class="img-thumbnail secondImage" width="200" height="200"
+          src="assets/images/drywall/photo_2021-07-17_02-43-56.jpg">
+      </div>
+    </div>
+    <div class="row row-content" id="gallery" style="border-bottom: none;">
+      <div class="col-12 mb-4">
+        <h2 class="display-4 text-left offset-1">
+          Gallery
+        </h2>
+        <hr style="width: 135px;  height: 3px; color: red;" class="mb-4 offset-1">
+      </div>
+      <div class="col-12">
+        <div class="container">
+          <div class="row galleryDiv">
+            <div class="col-12 col-md-4">
+              <img src="assets/images/drywall/photo_2021-07-17_02-43-56.jpg" class="img-thumbnail" height="400"
+                width="400">
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="assets/images/drywall/photo_2021-07-17_02-43-31.jpg" class="img-thumbnail" height="400"
+                width="400">
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="assets/images/epoxy/colorFlex/photo_2021-07-17_02-46-13.jpg" class="img-thumbnail" height="400"
+                width="400">
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="assets/images/epoxy/mettalic/photo_2021-07-17_02-52-31.jpg" class="img-thumbnail" height="400"
+                width="400">
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="assets/images/epoxy/solidColor/photo_2021-07-17_03-06-11.jpg" class="img-thumbnail" height="400"
+                width="400">
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="assets/images/concrete/photo_2021-07-09_17-09-36.jpg" class="img-thumbnail" height="400"
+                width="400">
+            </div>
+            <div class="col-12 text-center mt-4">
+              <button class="btn btn-outline-secondary">See more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container-fluid p-0" style="margin-top : -18px;" id="contact">
+    <div class="row row-content text-center" style="background-color: #e9ecef; padding: 29px 0px;"">
+      <div class=" col-12 mb-4">
+      <h2 class="display-4">
+        Contact us
+      </h2>
+      <hr style="width: 130px; margin: 0 auto; height: 3px; color: black;" class="mb-4">
+    </div>
+    <div class="col-12 col-md-4 offset-md-2">
+      <form style="text-align: left;" class="ps-2 pe-2" action="mailto:epoxy.mj@outlook.com" method="GET">
+        <div class="mb-3">
+          <label for="subjectInput" class="form-label">Subject:</label>
+          <input type="text" class="form-control" id="subjectInput" placeholder="Enter message subject" name="subject">
+        </div>
+        <div class="mb-3">
+          <label for="messageTextArea" class="form-label">Message: </label>
+          <textarea class="form-control" name="body" id="messageTextArea" rows="3"
+            aria-describedby="messageHelper"></textarea>
+          <div id="messageHelper" class="form-text">Enter your order or send feedback to us</div>
+        </div>
+        <button class="btn btn-warning" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="mb-3">
+        <div class="mb-2">
+          <i class="t"></i>
+          <span class="fa fa-map-marker fa-lg" style="font-size: 30px;"></span>
+        </div>
+        <p class="lead">
+          4932 ziegler <br>
+          st dearborn heights mi 48125 <br>
+          USA
+        </p>
+      </div>
+      <div class="mb-3">
+        <div class="mb-2">
+          <i class="t"></i>
+          <span class="fa fa-phone" style="font-size: 30px;"></span>
+        </div>
+        <p class="lead">
+          8622678669
+        </p>
+
+      </div>
+      <div class="mb-3">
+        <div class="mb-2">
+          <i class="t"></i>
+          <span class="fa fa-envelope" style="font-size: 30px;"></span>
+        </div>
+        <a class="btn-link" href="mailto:Epoxy.mj@outlook.com">
+          Epoxy.mj@outlook.com
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-4 offset-1 col-sm-2 mb-3 mb-md-0">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="btn-link">Home</a></li>
+            <li><a href="./aboutus.html" class="btn-link">About</a></li>
+            <li><a href="#" class="btn-link">Menu</a></li>
+            <li><a href="./contactus.html" class="btn-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-7 mb-3 mb-md-0 col-sm-5">
+          <h5>Our Address</h5>
+          <address>
+            4932 ziegler <br>
+            st dearborn heights mi 48125 <br>
+            USA<br>
+            <i class="fa fa-phone fa-lg mt-2 me-1"></i>: 8622678669<br>
+            <i class="fa fa-envelope fa-lg mt-2 me-1"></i> : <a
+              href="mailto:epoxy.mj@outlook.com">epoxy.mj@outlook.com</a>
+          </address>
+        </div>
+        <div class="col-12 col-sm-4 align-self-center">
+          <div class="text-center">
+            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                class="fa fa-google-plus fa-lg"></i></a>
+            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                class="fa fa-facebook fa-lg"></i></a>
+            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                class="fa fa-linkedin fa-lg"></i></a>
+            <a class="btn btn-social-icon" href="mailto:epoxy.mj@outlook.com"><i
+                class="fa fa-envelope text-white fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <p>© Copyright Michigan decorative coating LLC </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

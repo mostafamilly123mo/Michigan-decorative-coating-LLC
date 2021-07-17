@@ -1,0 +1,146 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.row-header {
+    margin: 0 auto;
+    padding: 0px 0px;
+} 
+
+.jumbotron {
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+  }
+.webgl {
+    height: auto; 
+    width: 100%;
+    max-width: 100%;
+}
+
+.logoImage {
+    inline-size: auto;
+    height: 68px;
+    width: 219px;
+}
+.logoImageMob {
+    inline-size: auto;
+    height: 60px;
+    width: 100px;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+.bg-black {
+    background-color: #1f1f1f;
+}
+
+.headerText {
+    font-family: -webkit-pictograph;
+}
+
+.serviceBtn {
+    margin-top: 15px;
+} 
+
+.webGlContatiner {
+    position: relative;
+}
+
+.imageButton {
+    display: block;
+    margin-bottom: 12px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.imageButtonContainers {
+    position: absolute;
+    bottom: 23px;
+    right: 30px;
+}
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-bottom: 2px ridge;
+    min-height: 400px; }
+
+.secondImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.secondImage2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+@media screen and (min-width : 1440px){
+    .secondImage2 {
+        right: 119px !important;
+    }
+    .secondImage {
+        left: 119px !important;
+    }
+}
+@media screen and (min-width : 2256px){
+    .secondImage2 {
+        right: 379px !important;
+    }
+    .secondImage {
+        left: 379px !important;
+    }
+}
+
+@media screen and (min-width : 768px) {
+    .webgl {
+        height: 760px !important;
+      }
+    .galleryDiv div {
+       margin-bottom: 0px;
+        }
+}
+
+@media screen and (max-width : 768px) {
+    .navbar-collapse {
+        border-bottom: 1px solid white;
+        padding-bottom: 16px ;
+    }
+    .webgl {
+        height: 450px !important;
+      }
+    .floorImages {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    .secondImage2 {
+        right: 0px !important;
+    } 
+    .secondImage {
+        left: 0px !important;
+    }
+    .galleryDiv div {
+        margin-bottom: 10px;
+        }
+}
+.redButton {
+    background-color: #fc3c3c;
+    color: wheat;
+}
+
+.galleryDiv div {
+    text-align: center;
+}
+
+.footer {
+    background-color: #1f1f1f;
+    margin: 0px auto;
+    padding: 37px 0px; 
+    padding-bottom: 11px;
+    color: white;
+}
