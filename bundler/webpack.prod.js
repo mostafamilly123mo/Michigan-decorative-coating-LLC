@@ -6,6 +6,7 @@ module.exports = merge(
     commonConfiguration,
     {
         mode: 'production',
+        devtool: 'source-map',
         plugins:
         [
             new CleanWebpackPlugin()

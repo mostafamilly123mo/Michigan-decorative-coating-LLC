@@ -1,17 +1,37 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const path = require('path')
 
 module.exports = {
     entry: {
-        index: path.resolve(__dirname, '../src/script.js'),
-        another: path.resolve(__dirname, '../src/config/bootstrapConfig.js'),
-      } ,
+        index: path.resolve(__dirname, '../src/scripts/script.js'),
+        vendor: path.resolve(__dirname, '../src/scripts/vendor.js'),
+        epoxy : path.resolve(__dirname, '../src/scripts/epoxy.js'),
+        aboutus : path.resolve(__dirname, '../src/scripts/aboutus.js'),
+        drywall : path.resolve(__dirname, '../src/scripts/drywall.js'),
+        concrete : path.resolve(__dirname, '../src/scripts/concrete.js')
+      },
     output:
     {
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, '../dist')
+    },
+    optimization :{
+        moduleIds: 'deterministic',
+        minimize: true,
+        minimizer : [
+            new TerserPlugin({
+                terserOptions: {
+                    format: {
+                        comments: false,
+                    },
+                },
+                extractComments: false,
+                parallel: true,
+            }),
+        ]
     },
     devtool: 'source-map',
     plugins:
@@ -23,7 +43,33 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
-            minify: true
+            minify: true ,
+            chunks : ['vendor' , 'index'] ,
+            filename : 'index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/epoxy.html'),
+            minify: true ,
+            chunks : [ 'vendor' , 'epoxy'],
+            filename : 'epoxy.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/aboutus.html'),
+            minify: true ,
+            chunks : [ 'vendor' , 'abouts'],
+            filename : 'aboutus.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/drywall.html'),
+            minify: true ,
+            chunks : [ 'vendor' , 'drywall'],
+            filename : 'drywall.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/concrete.html'),
+            minify: true ,
+            chunks : [ 'vendor' , 'concrete'],
+            filename : 'concrete.html'
         }),
         new MiniCSSExtractPlugin() ,
        

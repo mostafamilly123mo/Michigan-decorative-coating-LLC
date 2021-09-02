@@ -1,0 +1,462 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <style>
+        .spinnerContainer {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: white;
+            transition: all .5s ease-in;
+            opacity: 1;
+        }
+
+        .lds-ellipsis {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transition: tra;
+            transform: translate(-50%, -50%);
+        }
+
+        .lds-ellipsis div {
+            position: fixed;
+            margin-left: -36px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #000;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0)
+        }
+
+        .lds-ellipsis div:nth-child(1) {
+            left: 8px;
+            animation: lds-ellipsis1 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(2) {
+            left: 8px;
+            animation: lds-ellipsis2 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(3) {
+            left: 32px;
+            animation: lds-ellipsis2 0.6s infinite;
+        }
+
+        .lds-ellipsis div:nth-child(4) {
+            left: 56px;
+            animation: lds-ellipsis3 0.6s infinite;
+        }
+
+        @keyframes lds-ellipsis1 {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lds-ellipsis3 {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes lds-ellipsis2 {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(24px, 0);
+            }
+        }
+
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            max-height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-center spinnerContainer">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
+        <div class="container-fluid pb-3 pb-md-0">
+            <button class="navbar-toggler mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#" class="navbar-brand d-none d-md-block">
+                <img src="assets/images/logo.svg" class="logoImage" loading="lazy">
+            </a>
+            <a href="#" class="navbar-brand d-md-none d-block mx-auto">
+                <img src="assets/images/logo.svg" class="logoImageMob" loading="lazy">
+            </a>
+            <div class="collapse navbar-collapse mb-2 mb-md-0" id="navbarMenu">
+                <ul class="navbar-nav me-auto ms-md-3 mt-3 mt-md-0 mb-2 mb-md-0 gap-3 text-center">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="aboutus.html">About us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="epoxy.html">Epoxy flooring</a></li>
+                            <li><a class="dropdown-item" href="index.html#colorAndSealer">Color And Sealer</a></li>
+                            <li><a class="dropdown-item" href="index.html#countertops">Countertops</a></li>
+                            <li><a class="dropdown-item active" href="#">Concrete</a></li>
+                            <li><a class="dropdown-item" href="drywall.html">Dry wall</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                </ul>
+                <div class="d-flex d-md-block d-none me-2">
+                    <button class="btn btn-outline-warning " onclick="location.href='#contact'">
+                        Contact
+                    </button>
+                </div>
+                <div class="d-grid d-md-none d-block me-2">
+                    <button class="btn btn-outline-warning contactButton" onclick="location.href='#contact'">
+                        Contact
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="banner">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators d-md-block d-none">
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/concrete/slider2Concrete.jpg" class="d-block w-100 " loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/concrete/slidex3.jpg" class="d-block w-100 " loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/concrete/slide4.jpg" class="d-block w-100" loading="lazy">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <div class="row row-content text-center" id="aboutus">
+        <img class="col-lg-6 order-lg-1 offset-lg-2 rounded-circle mb-4 d-lg-block d-none"
+            src="assets/images/concrete/squareConcrete.jpg" style="width:325px" height="304" loading="lazy">
+        <div class="col-lg-6 order-lg-2 my-auto text-center ">
+            <h2>Concrete</h2>
+            <p class="lead mb-0">The transformation of concrete into decorative concrete is achieved through the use of
+                a variety of materials that may be applied during the pouring process or after the concrete is cured,
+                these materials and/or systems include but are not limited to stamped concrete, acid staining,
+                decorative overlays, polished concrete,
+                concrete countertops, vertical overlays and more. </p>
+        </div>
+    </div>
+    <div class="row row-content" id="gallery" style="border-bottom: none;">
+        <div class="col-12 mb-4">
+            <h2 class="display-4 text-center">
+                Concrete Gallery
+            </h2>
+            <hr style="width: 250px;  height: 3px; color: red; margin: 0 auto;" class="mb-4 offset-1">
+        </div>
+        <div class="col-12">
+            <div class="container">
+                <div class="row galleryDiv">
+                    <div class="col-12 col-md-4">
+                        <img src="assets/images/concrete/photo_2021-07-09_17-09-36.jpg" class="img-thumbnail"
+                            height="400" width="400" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="assets/images/concrete/photo_2021-07-17_02-45-05.jpg" class="img-thumbnail"
+                            height="400" width="400" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="assets/images/concrete/photo_2021-07-09_17-09-57 (2).jpg" class="img-thumbnail"
+                            height="400" width="400" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="assets/images/concrete/photo_2021-07-17_02-43-43.jpg" class="img-thumbnail"
+                            height="400" width="400" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="assets/images/concrete/photo_2021-07-17_02-38-34.jpg" class="img-thumbnail"
+                            height="400" width="400" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="assets/images/concrete/photo_2021-07-17_02-44-19.jpg" class="img-thumbnail"
+                            height="400" width="400" loading="lazy">
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal"
+                            data-bs-target=".GalleryModal">See
+                            more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-content text-center" style="border-bottom: none; padding: 60px 0px;" id="contact">
+        <div class=" col-12 mb-4">
+            <h2 class="display-4">
+                Contact us
+            </h2>
+            <hr style="width: 130px; margin: 0 auto; height: 3px; color: black;" class="mb-4">
+        </div>
+        <div class="col-12 col-md-4 offset-md-2">
+            <form style="text-align: left;" class="ps-2 pe-2" id="contactForm">
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" name="subject">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Phone:</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone"
+                        name="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="messageTextArea" class="form-label">Message: </label>
+                    <textarea class="form-control" name="body" id="messageTextArea" rows="3"
+                        aria-describedby="messageHelper"></textarea>
+                    <div id="messageHelper" class="form-text">Enter your order or send feedback to us</div>
+                </div>
+                <button class="btn btn-warning" type="submit" id="submitButton">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3">
+                <div class="mb-2">
+                    <span class="fa fa-map-marker fa-lg" style="font-size: 30px;"></span>
+                </div>
+                <p class="lead">
+                    4932 ziegler <br>
+                    st dearborn heights mi 48125 <br>
+                    USA
+                </p>
+            </div>
+            <div class="mb-3">
+                <div class="mb-2">
+                    <span class="fa fa-phone" style="font-size: 30px;"></span>
+                </div>
+                <p class="lead">
+                    8622678669
+                </p>
+
+            </div>
+            <div class="mb-3">
+                <div class="mb-2">
+                    <span class="fa fa-envelope" style="font-size: 30px;"></span>
+                </div>
+                <a class="btn-link" href="mailto:Epoxy.mj@outlook.com">
+                    Epoxy.mj@outlook.com
+                </a>
+            </div>
+            <div class="mb-3">
+                <div class="mb-2">
+                    <span class="fa fa-clock-o" style="font-size: 30px;"></span>
+                </div>
+                <p>
+                    9:00 AM to 7:00 PM Monday-Friday <br>
+                    9:00 AM to 2:00 PM Saturday <br>
+                    Closed Sunday
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-4 offset-1 col-sm-2 mb-3 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="btn-link">Home</a></li>
+                        <li><a href="aboutus.html" class="btn-link">About</a></li>
+                        <li><a href="#contact" class="btn-link">Contact</a></li>
+                        <li><a href="https://www.samjobllc.com/" class="btn-link">Sam Job llc</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 mb-3 mb-md-0 col-sm-5">
+                    <h5>Address</h5>
+                    <address>
+                        4932 ziegler <br>
+                        st dearborn heights mi 48125 <br>
+                        USA<br>
+                        <i class="fa fa-phone fa-lg mt-2 me-1"></i>: 8622678669<br>
+                        <i class="fa fa-envelope fa-lg mt-2 me-1"></i> : <a
+                            href="mailto:epoxy.mj@outlook.com">epoxy.mj@outlook.com</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-facebook"
+                            href="https://www.facebook.com/michigandecorative.coating"><i
+                                class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="https://www.instagram.com/michigandecorat"><img
+                                src="assets/images/instagram.png" width="32" height="32"></a>
+                        <a class="btn btn-social-icon" href="mailto:epoxy.mj@outlook.com"><i
+                                class="fa fa-envelope text-white fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright Michigan decorative coating LLC </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade GalleryModal" id="modalQuickView5" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 viewImage">
+                            <!--Carousel Wrapper-->
+                            <div id="carousel-thumb5" class="carousel slide pb-3 carousel-fade carousel-thumbnails"
+                                data-bs-ride="carousel">
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-09_17-09-57.jpg" alt="First slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-09_17-09xx57 (2).jpg"
+                                            alt="Second slide" loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-40-07.jpg" alt="Third slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-42-34.jpg"
+                                            alt="Fourth slide" loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-43-01.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-43-50.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-44-07.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-44-14.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-44-17.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_03-05-12.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-43-50.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-47-31.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-44-17.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 "
+                                            src="assets/images/concrete/photo_2021-07-17_02-42-34.jpg" alt="Five slide"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel-thumb5" role="button"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-thumb5" role="button"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
